@@ -1,0 +1,28 @@
+<!-- form.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact</title>
+    </head>
+    <body>
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="Name"/>
+            <input type="email" name="email" placeholder="Email"/>
+            <textarea name="message" placeholder="Message"></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <p id="confirmation" style="display:none;">Thank you for your message</p>
+
+        <script>
+            document
+                .getElementById('contact-form')
+                .addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    document
+                        .getElementById('confirmation')
+                        .style
+                        .display = 'block';
+                });
+        </script>
+    </body>
+</html>
